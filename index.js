@@ -9,9 +9,9 @@ function geo_success(position) {
     })
     .then(function(response) {
       addRow({
-        time: new Date().toLocaleString(),
-        lat: latitude,
-        lon: longitude,
+        time: new Date().toLocaleTimeString(),
+        lat: latitude.toPrecision(4),
+        lon: longitude.toPrecision(4),
         ...response.wind
       })
     })
